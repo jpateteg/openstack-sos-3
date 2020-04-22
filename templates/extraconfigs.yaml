@@ -1,0 +1,5 @@
+parameter_defaults: 
+  ComputeExtraConfig:
+    nova::config::nova_config:
+      compute/max_disk_devices_to_attach:
+       value: '"5"'

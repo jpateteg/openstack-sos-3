@@ -1,0 +1,20 @@
+nodes:
+  - mac:
+      - "52:54:00:62:c1:21"
+    name: "overcloud-compute-0"
+    arch: "x86_64"
+    pm_addr: "192.168.100.250"
+    pm_port: "6230"
+    pm_user: "admin"
+    pm_password: "osp123"
+    pm_type: "ipmi"
+  - mac:
+      - "52:54:00:08:4c:ab"
+    name: "overcloud-controller-0"
+    arch: "x86_64"
+    pm_addr: "192.168.100.250"
+    pm_port: "6231"
+    pm_user: "admin"
+    pm_password: "osp123"
+    pm_type: "ipmi"
+

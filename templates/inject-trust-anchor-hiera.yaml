@@ -1,0 +1,64 @@
+# *******************************************************************
+# This file was created automatically by the sample environment
+# generator. Developers should use `tox -e genconfig` to update it.
+# Users are recommended to make changes to a copy of the file instead
+# of the original, if any customizations are needed.
+# *******************************************************************
+# title: Inject SSL Trust Anchor on Overcloud Nodes
+# description: |
+#   When using an SSL certificate signed by a CA that is not in the default
+#   list of CAs, this environment allows adding a custom CA certificate to
+#   the overcloud nodes.
+parameter_defaults:
+  # Map containing the CA certs and information needed for deploying them.
+  # Type: json
+  CAMap:
+    first-ca-name:
+      content: |
+        -----BEGIN CERTIFICATE-----
+MIIDjTCCAnWgAwIBAgIQG4CYA8HHT7maFbK2HHugfTANBgkqhkiG9w0BAQsFADBQ
+MSAwHgYDVQQDDBdMb2NhbCBTaWduaW5nIEF1dGhvcml0eTEsMCoGA1UEAwwjMWI4
+MDk4MDMtYzFjNzRmYjktOWExNWIyYjYtMWM3YmEwN2QwHhcNMjAwMjEwMjA0NzAx
+WhcNMjEwMjEwMjA0NzAxWjBQMSAwHgYDVQQDDBdMb2NhbCBTaWduaW5nIEF1dGhv
+cml0eTEsMCoGA1UEAwwjMWI4MDk4MDMtYzFjNzRmYjktOWExNWIyYjYtMWM3YmEw
+N2QwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCmfPkA5o+CjStg7RTi
+bBNacXNrKypCZ0MFSKPLRbPbdmHffPzgFtpTHgor/IAvlepltAiu697UwaaaxSm9
+f/1vQuUqFOZ+i3N2bfNwFJzFbkkVUB3TonBInpXw/3TOgcHK6vIGT5fKKzCUGKqJ
+f3pncZist5y3UHtM1BEQnoB4DU0eM9b2093kGzXXh1hNhXRM5SaYm9HBCrxm7Sab
+jcwFE8hz/QWQCMDbUZJhHr4BdW2K96u1VdMVBFVIX2CF480M1mXvcWnZm/gDb/NV
+zvrR/Gc+TgkpareQ/mKcyT5A+HUZV4emXfZ0H97otVZ3+sOtxAMK7uYSHNemtx/x
+tQ/JAgMBAAGjYzBhMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYEFAcpGpURvZ+F
+M36SiYHmSn8jfCUSMB8GA1UdIwQYMBaAFAcpGpURvZ+FM36SiYHmSn8jfCUSMA4G
+A1UdDwEB/wQEAwIBhjANBgkqhkiG9w0BAQsFAAOCAQEAobxW1BorMd4sjIXZqDb6
+QNnxS4/dqIjt18Pf1I388MqVWMk13sbCuXQTDtgNLZKcXYeIsKkYGBSa1lRsppjB
+aYvqeIoGA7XZPzVeeT5Y8sMHrvPDz9at2X7oy5U9yE6akVqQXl5wtEyXdBam8F4y
+Gey7FUg3CdISZ+rpzyva7vzEs9Rmzs0sqUFFeu7c87K77Ij+XAfUjzrZTAQsE0wL
+HGZBM5k8+JkoOmQdf7dfsnj7WZvK4RfWYfganGESffEFqKu+XBz1EVywdx/BS2kS
+OA7DjTeCs4sa3SEKs3qqHJOB9YgNuEGsyk7pL8h0ZCHb+Go26LHa+i4WqDCtlFWS
+Yg==
+-----END CERTIFICATE-----
+    second-ca-name:
+      content: |
+        -----BEGIN CERTIFICATE-----
+MIIDjTCCAnWgAwIBAgIQG4CYA8HHT7maFbK2HHugfTANBgkqhkiG9w0BAQsFADBQ
+MSAwHgYDVQQDDBdMb2NhbCBTaWduaW5nIEF1dGhvcml0eTEsMCoGA1UEAwwjMWI4
+MDk4MDMtYzFjNzRmYjktOWExNWIyYjYtMWM3YmEwN2QwHhcNMjAwMjEwMjA0NzAx
+WhcNMjEwMjEwMjA0NzAxWjBQMSAwHgYDVQQDDBdMb2NhbCBTaWduaW5nIEF1dGhv
+cml0eTEsMCoGA1UEAwwjMWI4MDk4MDMtYzFjNzRmYjktOWExNWIyYjYtMWM3YmEw
+N2QwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCmfPkA5o+CjStg7RTi
+bBNacXNrKypCZ0MFSKPLRbPbdmHffPzgFtpTHgor/IAvlepltAiu697UwaaaxSm9
+f/1vQuUqFOZ+i3N2bfNwFJzFbkkVUB3TonBInpXw/3TOgcHK6vIGT5fKKzCUGKqJ
+f3pncZist5y3UHtM1BEQnoB4DU0eM9b2093kGzXXh1hNhXRM5SaYm9HBCrxm7Sab
+jcwFE8hz/QWQCMDbUZJhHr4BdW2K96u1VdMVBFVIX2CF480M1mXvcWnZm/gDb/NV
+zvrR/Gc+TgkpareQ/mKcyT5A+HUZV4emXfZ0H97otVZ3+sOtxAMK7uYSHNemtx/x
+tQ/JAgMBAAGjYzBhMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYEFAcpGpURvZ+F
+M36SiYHmSn8jfCUSMB8GA1UdIwQYMBaAFAcpGpURvZ+FM36SiYHmSn8jfCUSMA4G
+A1UdDwEB/wQEAwIBhjANBgkqhkiG9w0BAQsFAAOCAQEAobxW1BorMd4sjIXZqDb6
+QNnxS4/dqIjt18Pf1I388MqVWMk13sbCuXQTDtgNLZKcXYeIsKkYGBSa1lRsppjB
+aYvqeIoGA7XZPzVeeT5Y8sMHrvPDz9at2X7oy5U9yE6akVqQXl5wtEyXdBam8F4y
+Gey7FUg3CdISZ+rpzyva7vzEs9Rmzs0sqUFFeu7c87K77Ij+XAfUjzrZTAQsE0wL
+HGZBM5k8+JkoOmQdf7dfsnj7WZvK4RfWYfganGESffEFqKu+XBz1EVywdx/BS2kS
+OA7DjTeCs4sa3SEKs3qqHJOB9YgNuEGsyk7pL8h0ZCHb+Go26LHa+i4WqDCtlFWS
+Yg==
+-----END CERTIFICATE-----
+
